@@ -8,6 +8,9 @@ body{
     height: 100vh;
     display: grid;   
     grid-template-rows: 0.5fr 4fr 0.5fr;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .navbar{
@@ -124,20 +127,20 @@ body{
 }
 .previous{
     width: 80px;
-    height: 68px;
+    
 }
 .play{
     width: 60px;
-    height: 52px;
+    
 }
 .pause{
     display: none;
     width: 60px;
-    height: 60px;
+    
 }
 .next{
     width: 80px;
-    height: 68px;
+    
 }
 
 .others{
@@ -186,4 +189,32 @@ img:not(:hover){
 .portada:not(:hover){
     transition: width 0.5s, height 0.5s, transform 0.5s;
     transform: scale(1);
+}
+
+
+.wrapper2{
+    display: none;
+}
+
+@media (min-width: 720px){
+
+    .wrapper{
+        max-width: 500px;
+    }
+    .wrapper2{
+        display: inline;
+        position: absolute;
+        top: 0;
+        left: 520px;
+    }
+    .line{
+        width: 2px;
+        height: 80vh;
+        margin: 0px 20px;
+        background-color: black;
+        border-color: black;
+        position: absolute;
+        align-self: center;
+        display: inline;
+    }
 }
