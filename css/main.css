@@ -6,8 +6,9 @@ body{
 }
 .wrapper{
     height: 100vh;
+    max-width: 500px;
     display: grid;   
-    grid-template-rows: 0.5fr 4fr 0.5fr;
+    grid-template-rows: 0.5fr 2.5fr 0.5fr;
     position: absolute;
     top: 0;
     left: 0;
@@ -39,7 +40,7 @@ body{
     display: flex;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
 
 }
 .portadas::-webkit-scrollbar{
@@ -53,12 +54,14 @@ body{
     border-radius: 25px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     filter: blur(8px);
+    scroll-snap-align: center;
 }
 .portada4{
     filter: blur(0);
     width: 225px;
     height: 225px;
 }
+
 
 
 .cancion{
@@ -74,6 +77,7 @@ body{
 
 
 
+
 .carga{
     height: 1.5px;
     background-color: black;
@@ -83,7 +87,7 @@ body{
 }
 .reproduciendo{
     position: relative;
-    width: 26vw;
+    width: 26%;
     height: 4px;
     background-color: black;
     border-color: black;
@@ -118,7 +122,7 @@ body{
 }
 
 .controls{
-    margin: 20px 40px 20px;
+    margin: 40px 40px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -126,25 +130,27 @@ body{
     align-items: center;
 }
 .previous{
-    width: 80px;
+    width: 60px;
     
 }
 .play{
-    width: 60px;
+    width: 40px;
     
 }
 .pause{
     display: none;
-    width: 60px;
+    width: 40px;
     
 }
 .next{
-    width: 80px;
+    width: 60px;
     
 }
 
 .others{
-    margin: 60px 60px 30px;
+    align-items: center;
+    height: 40px;
+    margin: 60px 60px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -198,9 +204,21 @@ img:not(:hover){
 
 @media (min-width: 720px){
 
-    .wrapper{
+
+    .navbar{
         max-width: 500px;
     }
+    .portadas{
+        max-width: 500px;
+    }
+    .nombres{
+        max-width: 500px;
+    }
+    .botones{
+        max-width: 500px;
+    }
+
+
     .wrapper2{
         display: inline;
         position: absolute;
@@ -209,12 +227,12 @@ img:not(:hover){
     }
     .line{
         width: 2px;
-        height: 80vh;
+        height: 90vh;
         margin: 0px 20px;
         background-color: black;
         border-color: black;
         position: absolute;
-        align-self: center;
-        display: inline;
+        top: 5vh;
+        left: -40px;
     }
 }
